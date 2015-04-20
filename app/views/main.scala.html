@@ -1,0 +1,56 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html ng-app="NoteWrangler">
+    <head>
+        <title>@title</title>
+
+        <link rel="stylesheet" href="@routes.Assets.at("styles/bootstrap.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("styles/bootstrap-theme.css")">
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("styles/main.css")">
+
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+
+    </head>
+    <body>
+        @content
+    </body>
+
+    <!-- vendor -->
+    <script src="@routes.Assets.at("javascript/vendor/jquery-2.1.3.min.js")"></script>
+    <script src="@routes.Assets.at("javascript/vendor/angular.js")"></script>
+    <script src="@routes.Assets.at("javascript/vendor/angular-route.js")"></script>
+    <script src="@routes.Assets.at("javascript/vendor/angular-resource.js")"></script>
+    <script src="@routes.Assets.at("javascript/vendor/bootstrap.js")"></script>
+    <script src="@routes.Assets.at("javascript/vendor/ngGravatar.js")"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+
+    <!-- App -->
+    <script src="@routes.Assets.at("javascript/app.js")"></script>
+    <script src="@routes.Assets.at("javascript/routes.js")"></script>
+
+    <!-- Directives -->
+    <script src="@routes.Assets.at("javascript/directives/nwPageNav.js")"></script>
+    <script src="@routes.Assets.at("javascript/directives/nwCategorySelector.js")"></script>
+    <script src="@routes.Assets.at("javascript/directives/title.js")"></script>
+
+    <!-- Controllers -->
+    <script src="@routes.Assets.at("javascript/controllers/noteIndexController.js")"></script>
+    <script src="@routes.Assets.at("javascript/controllers/noteShowController.js")"></script>
+    <script src="@routes.Assets.at("javascript/controllers/noteEditController.js")"></script>
+    <script src="@routes.Assets.at("javascript/controllers/noteCreateController.js")"></script>
+    <script src="@routes.Assets.at("javascript/controllers/usersShowController.js")"></script>
+    <script src="@routes.Assets.at("javascript/controllers/usersIndexController.js")"></script>
+
+    <!-- Filters -->
+    <script src="@routes.Assets.at("javascript/filters/categoryFilter.js")"></script>
+
+    <!-- Services -->
+    <script src="@routes.Assets.at("javascript/services/note.js")"></script>
+    <script src="@routes.Assets.at("javascript/services/user.js")"></script>
+    <script src="@routes.Assets.at("javascript/services/category.js")"></script>
+
+</html>

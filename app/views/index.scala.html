@@ -1,0 +1,26 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="/#/">NoteWrangler</a>
+                </div>
+
+            </div>
+            <nw-page-nav></nw-page-nav>
+        </div>
+    </nav>
+
+    <div>
+        <form action="@routes.Application.addUser()" method="POST">
+            <input type="text" name="name">
+            <button>Add Person</button>
+        </form>
+    </div>
+    <div ng-view class="container-fluid"></div>
+
+
+}
